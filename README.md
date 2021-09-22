@@ -1,2 +1,3 @@
 # phpmvc
-Buildin simple mvc faramework with vanilla php
+
+Building simple mvc framework with vanilla php
