@@ -1,0 +1,16 @@
+{
+    "name": "momch/phpmvc",
+    "description": "building mvc framework with vanilla php",
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "/"
+        }
+    },
+    "authors": [
+        {
+            "name": "momchilmitev",
+            "email": "momchilmitev87@gmail.com"
+        }
+    ],
+    "require": {}
+}
