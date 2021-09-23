@@ -3,7 +3,7 @@
     "description": "building mvc framework with vanilla php",
     "autoload": {
         "psr-4": {
-            "Framework\\": "/"
+            "Framework\\": "app/"
         }
     },
     "authors": [
