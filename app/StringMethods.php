@@ -31,7 +31,7 @@ class StringMethods
         self::$delimiter = $delimiter;
     }
 
-    public static function match(string $string, string $pattern): int|false|null
+    public static function match($string, $pattern)
     {
         preg_match_all(self::normalize($pattern), $string, $matches, PREG_PATTERN_ORDER);
         if (!empty($matches[1])) {
