@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
-namespace Framework;
+namespace Framework\Core;
+
+use Framework\Helpers\StringMethods;
+use Framework\Helpers\ArrayMethods;
 
 class Inspector
 {

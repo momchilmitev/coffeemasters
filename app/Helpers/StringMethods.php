@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace Framework;
+namespace Framework\Helpers;
 
 class StringMethods
 {
