@@ -9,4 +9,5 @@ app.router = Router;
 
 window.addEventListener('DOMContentLoaded', (e) => {
   loadMenuData();
+  app.router.init();
 });
