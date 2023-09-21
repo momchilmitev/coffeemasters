@@ -8,6 +8,11 @@ const Router = {
       });
     });
 
+    // Handler for URL change
+    window.addEventListener('popstate', (e) => {
+      Router.go(e.state.path, false);
+    });
+
     // Check the initial path
     Router.go(location.pathname);
   },
