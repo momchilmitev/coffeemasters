@@ -5,7 +5,7 @@ import Router from './services/Router.js';
 
 import { DetailsPage } from './components/DetailsPage.js';
 import { MenuPage } from './components/MenuPage.js';
-import { OrderPage } from './components/DetailsPage.js';
+import { OrderPage } from './components/OrderPage.js';
 
 window.app = {};
 app.store = Store;
