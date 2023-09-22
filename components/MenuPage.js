@@ -1,4 +1,4 @@
-class MenuPage extends HTMLElement {
+export class MenuPage extends HTMLElement {
   constructor() {
     super();
   }

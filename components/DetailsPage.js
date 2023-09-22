@@ -1,4 +1,4 @@
-class DetailsPage extends HTMLElement {
+export class DetailsPage extends HTMLElement {
   constructor() {
     super();
   }

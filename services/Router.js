@@ -17,8 +17,6 @@ const Router = {
     Router.go(location.pathname);
   },
   go: (path, addToHistory = true) => {
-    console.log(path);
-
     if (addToHistory) {
       history.pushState({ path }, null, path);
     }
@@ -27,17 +25,14 @@ const Router = {
 
     switch (path) {
       case '/':
-        component = document.createElement('h1');
-        component.textContent = 'Hi from the HOME page.';
+        component = document.createElement('menu-page');
         break;
       case '/order':
-        component = document.createElement('h1');
-        component.textContent = 'Hi from your cart.';
+        component = document.createElement('order-page');
         break;
       default:
         if (path.startsWith('/details-')) {
-          component = document.createElement('h1');
-          component.textContent = 'Details page';
+          component = document.createElement('details-page');
           const param = path.substring(path.lastIndexOf('-') + 1);
           component.dataset.id = param;
         }

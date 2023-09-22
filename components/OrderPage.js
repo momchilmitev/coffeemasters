@@ -1,4 +1,4 @@
-class OrderPage extends HTMLElement {
+export class OrderPage extends HTMLElement {
   constructor() {
     super();
   }
