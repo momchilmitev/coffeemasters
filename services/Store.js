@@ -14,6 +14,8 @@ const proxiedStore = new Proxy(Store, {
     if (prop == 'cart') {
       dispatchEvent(new Event('appcartchange'));
     }
+
+    return true;
   },
 });
 
