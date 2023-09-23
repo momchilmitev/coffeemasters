@@ -31,10 +31,11 @@ const Router = {
         component = document.createElement('order-page');
         break;
       default:
-        if (path.startsWith('/details-')) {
+        if (path.startsWith('/product-')) {
           component = document.createElement('details-page');
           const param = path.substring(path.lastIndexOf('-') + 1);
-          component.dataset.id = param;
+          component.dataset.productId = param;
+          break;
         }
         component = document.createElement('h1');
         component.textContent = 'Not found';
