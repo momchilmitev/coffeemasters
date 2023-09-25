@@ -67,10 +67,14 @@ section.page {
 }
 
 #badge {
+    align-items: center;
+    justify-content: center;
+    display: flex;
     padding: 4px;
     background-color: red;
     border-radius: 15px;
     width: 10px;
+    height: 10px;
     text-align: center;
     font-size: x-small;
     color: white;
