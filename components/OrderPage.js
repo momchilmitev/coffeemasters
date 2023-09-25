@@ -60,9 +60,8 @@ export class OrderPage extends HTMLElement {
                 <p class='price-total'>$${total.toFixed(2)}</p>
             </li>                
         `;
+      this.setFormBindings(this.root.querySelector('form'));
     }
-
-    this.setFormBindings(this.root.querySelector('form'));
   }
 
   setFormBindings(form) {
