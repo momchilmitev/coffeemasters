@@ -10,7 +10,9 @@ const Router = {
 
     // Handler for URL change
     window.addEventListener('popstate', (e) => {
-      Router.go(e.state.path, false);
+      if (e.state) {
+        Router.go(e.state.path, false);
+      }
     });
 
     // Check the initial path
