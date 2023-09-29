@@ -16,6 +16,18 @@ app.router = Router;
 window.addEventListener('DOMContentLoaded', (e) => {
   loadMenuData();
   app.router.init();
+
+  if ('share' in navigator) {
+    const shareButton = document.getElementById('share-button');
+    shareButton.addEventListener('click', (e) => {
+      navigator.share({
+        title: 'Coffemasters',
+        text: 'https://coffemasters.com',
+      });
+    });
+  } else {
+    shareButton.style.display = 'none';
+  }
 });
 
 window.addEventListener('appcartchange', (e) => {
