@@ -28,6 +28,20 @@ window.addEventListener('DOMContentLoaded', (e) => {
   } else {
     shareButton.style.display = 'none';
   }
+
+  let bipEvent = null;
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    bipEvent = e;
+  });
+
+  document.getElementById('install-button').addEventListener('click', (e) => {
+    if (bipEvent) {
+      bipEvent.prompt();
+    } else {
+      alert("Look in the browser's menu to install app.");
+    }
+  });
 });
 
 window.addEventListener('appcartchange', (e) => {

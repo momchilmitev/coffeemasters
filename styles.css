@@ -82,3 +82,16 @@ section.page {
     right: 5px;
     top: 6px;
 }
+
+@media (display-mode: standalone), (display-mode: minimal-ui) {
+    /* body>#toolbar {
+        padding: env(safe-area-inset-top) 
+            env(safe-area-inset-right) 
+            env(safe-area-inset-bottom) 
+            env(safe-area-inset-left) !important;
+    } */
+
+    #install-button {
+        display: none;
+    }
+}
