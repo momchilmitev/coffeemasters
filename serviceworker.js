@@ -26,11 +26,23 @@ const assets = [
 ];
 
 self.addEventListener('install', async (event) => {
-  caches.open('assets').then((cache) => {
-    cache.addAll(assets);
-  });
+  event.waitUntil(
+    caches.open('assets').then((cache) => {
+      cache.addAll(assets);
+    }),
+  );
 });
 
 self.addEventListener('fetch', async (event) => {
-  // TODO
+  event.respondWith(
+    caches.open('assets').then((cache) => {
+      cache.match(event.request).then((cachedAsset) => {
+        if (cachedAsset) {
+          return cachedAsset;
+        } else {
+          return fetch(event.request);
+        }
+      });
+    }),
+  );
 });
